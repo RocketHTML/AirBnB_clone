@@ -62,6 +62,9 @@ class HBNBCommand(cmd.Cmd):
 			print("all: to be implemented")
 			pass
 
+	def do_update(self, arg):
+		pass
+
 	def do_EOF(self, arg):
 		'''Represents end of file'''
 		return True

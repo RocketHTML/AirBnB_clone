@@ -10,17 +10,22 @@ class BaseModel:
     Args:
     """
 
-    def __init__(self, id=None):
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.datetime.now()
-        self.updated_at = datetime.datetime.now()
-        print()
-        print("id: " + self.id)
-        print("Created at " + str(self.created_at))
-        print("Updated at " + str(self.updated_at))
-        print()
-        print(type(self.updated_at))
-        print()
+    def __init__(self, *args, **kwargs):
+
+        attrs = ['id', 'created_at', 'updated_at']
+        defaults = [str(uuid.uuid4()), 
+                  datetime.datetime.now(), 
+                  datetime.datetime.now()]
+
+        for a, v in zip(attrs, defaults):
+            if a in kwargs:
+                if a == 'created_at' or a == 'updated_at':
+                    val = datetime.strptime(kwargs[a], datetime.isoformat())
+                else:
+                    val = kwargs[a]
+                setattr(self, a, val)
+            else:
+                setattr(self, a, v)
 
     def to_dict(self):
         self.__dict__['updated_at'] = str(self.updated_at.isoformat())
