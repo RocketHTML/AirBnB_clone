@@ -14,6 +14,7 @@
 
 	display: grid;
 	grid-template-columns: repeat(20, 1fr);
+	align-items: stretch;
 
 }
 
@@ -30,4 +31,33 @@
 
 .button:hover {
 	opacity: 0.9;
+}
+
+.locations {
+	grid-column: 1/6;
+	border-right: 1px solid #DDDDDD;
+}
+
+.amenities {
+	grid-column: 6/11;
+}
+
+.filters div {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 30px;
+}
+
+.filters div h3 {
+	color:blue;
+	font-weight: 600;
+	/*margin: auto 0 auto 0;*/
+}
+
+.filters div h4 {
+	color:green;
+	font-weight: 400;
+	font-size: 14px;
+	/*margin: auto 0 auto 0;*/
 }

@@ -5,8 +5,8 @@ header {
 	height: 70px;
 	width: 100%;
 
-	display:grid;
 	border-bottom: 1px solid #CCCCCC;
+	display:grid;
 	grid-template-columns: repeat(7, 1fr);
 	align-items: stretch;
 }
