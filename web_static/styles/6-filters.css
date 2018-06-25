@@ -53,6 +53,7 @@
 
 .filters div {
 	display: grid;
+	grid-template-rows: repeat(auto-fit, 35px);
 	/*height: 200px;*/
 	/*border: 1px dotted green;*/
 }
@@ -102,6 +103,8 @@ ul {
 	/*padding-top:20px;*/
 	padding-bottom:30px;
 	display: none;
+	background:#FAFAFA;
+	z-index:1;
 }
 
 .filters div:hover .popover {
