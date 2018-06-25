@@ -3,12 +3,12 @@ header {
 	box-sizing: border-box;
 	padding-left: 20px;
 	height: 70px;
-	width: 100%;
-
-	grid-row: 1/2;
+	/*width: 100%;*/
 	grid-column: 1/21;
+	/*grid-row: 1/2;*/
 
 	border-bottom: 1px solid #CCCCCC;
+	
 	display:grid;
 	grid-template-columns: repeat(7, 1fr);
 	align-items: stretch;

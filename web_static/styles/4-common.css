@@ -11,6 +11,5 @@ body {
 	font-family: Circular,"Helvetica Neue", Helvetica, Arial, sans-serif;
 
 	display:grid;
-	grid-template-rows: repeat(20, 1fr);
 	grid-template-columns: repeat(20, 1fr);
 }
